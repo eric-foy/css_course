@@ -1,0 +1,54 @@
+/* * {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid red;
+} */
+
+/* html {
+    font-size: 22px;
+    border: 3px solid black;
+} */
+
+body {
+    font-size: 22px;
+    border: 3px solid black;
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+h1, h2 {
+    color: aqua;
+}
+
+
+.gray {
+    color: gray;
+}
+
+p {
+    color: crimson;
+}
+
+p {
+    color:darkturquoise;
+}
+
+/* should be made into a class like .highlight */
+/* p span {
+    text-transform: uppercase;
+    background-color:chartreuse;
+} */
+
+.highlight {
+    text-transform: uppercase;
+    background-color:chartreuse;
+}
+
+#second {
+    font-style: italic;
+}
