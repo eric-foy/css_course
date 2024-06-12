@@ -1,0 +1,54 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* use 100% instead of 100vw to prevent horizontal scrollbar. */
+/* body {
+    width: 100vw;
+    width: 100%;
+} */
+
+/* Dont use absolute font size. */
+/* html {
+    font-size: 16px;
+} */
+
+/* h1 width is 50% of this 50%. */
+/* header {
+    width: 50%;
+} */
+
+h1 {
+    border: 2px dashed red;
+    width: 50%;
+
+    /* em units for the font-size property will be relative to
+    the font-size of the parent element. em units on other
+    properties than font-size will be relative to the font-size
+    of the current element. */
+    font-size: 3rem;
+    padding: 0.5em;
+}
+
+main {
+    /* width: 50vw;
+    background-color: aquamarine; */
+    font-size: 2rem;
+}
+
+/* 2rem is 2x the root element <HTML> font-size. */
+/* 2em is 2x the parent element font-size. */
+p {
+    font-size: 2rem;
+
+    /* ch is the character width.
+    30ch is 30 characters before word wrap. */
+    width: 30ch;
+}
