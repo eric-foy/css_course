@@ -5,3 +5,40 @@ body {
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
 }
+
+/* How default links are styled. */
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+}
+
+/* Pseudoclasses, should be in this proper order. */
+a:visited {
+    color: purple;
+}
+
+a:hover, a:focus {
+    /* To get a color in the same color scheme just change the hue. */
+    /* color: hsl(185, 44%, 49%); */
+
+    /* To get a lighter color increase the light. */
+    /* color: hsl(207, 44%, 80%); */
+
+    /* To add transparency set opacity less then 1. */
+    /* opacity: 0.7; */
+    /* Or add an alpha chanel to hsl. */
+    color: hsl(207, 44%, 49%, 0.7);
+
+    /* Highlight on hover. */
+    background: lightgoldenrodyellow;
+}
+
+a:active {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(207, 44%, 49%);
+}
