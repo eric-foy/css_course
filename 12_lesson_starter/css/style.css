@@ -4,3 +4,39 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
 }
+
+.columns {
+  column-count: 4;
+  column-width: 250px;
+  /* columns: 4 250px */
+
+  column-rule: 3px solid turquoise;
+  column-gap: 3rem;
+}
+
+.columns p {
+  margin-top: 0;
+} 
+
+.columns h2 {
+  margin-top: 0;
+  background-color: peru;
+  color: white;
+  padding: 1rem;
+  break-inside: avoid;
+
+  /* When shinking page size down to one column, break-before: column forces a line break. So all columns will be displayed. */
+  /* break-before: column; */
+}
+
+.columns .quote {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: peru;
+  column-span: all;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
