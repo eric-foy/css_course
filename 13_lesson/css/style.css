@@ -25,6 +25,7 @@ body {
   width: 40vw;
   height: 50vh;
   margin: 200px auto;
+  /* position: relative; */
 }
 
 .box {
@@ -35,76 +36,42 @@ body {
 }
 
 .absolute {
-  background-color: #00f;
+  background-color: aqua;
   position: absolute;
-  top: 0;
-  left: 0;
+  
+  /* top, right, left, or bottom, must be set for position absolute. */
+  top: 10px;
+  left: 10px;
+
+  /* 100px from top and 50px from left from closest relative,sticky parent element. */
+  /* top: 100px; */
+  /* left: 50px; */
+
+  /* Default of 0 */
   z-index: 1;
+
+  /* Move absolute div off the page. */
+  /* left: -10000px; */
 }
 
+/* relative position is relative to its parent element. */
+ /* top, right, left, or bottom, must be set for position relative. */
 .relative {
-  background-color: #f00;
+  background-color: bisque;
   position: relative;
-  top: 300px;
-  left: 100px;
+  top: 10px;
+  left: 10px;
 }
 
 .fixed {
-  background-color: green;
+  background-color: cadetblue;
   position: fixed;
-  top: 100px;
+  top: 10px;
+  left: 10px;
 }
 
 .sticky {
-  background-color: #000;
+  background-color: indianred;
   position: sticky;
-  top: 0;
-}
-
-/*  Remember, how to make things disappear! */
-
-/*//////////////////////////*/
-
-html { scroll-behavior: smooth; }
-
-section {
-  height: 100vh;
-}
-
-.blue { background-color: #00f;}
-.red { background-color: #f00;}
-.green { background-color: green;}
-
-header, footer {
-  color: #fff;
-  text-align: center;
-  height: 100px;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  font-size: 5rem;
-}
-
-footer {
-  background-color: #000;
-  position: sticky;
-  bottom: 0;
-  font-size: 3rem;
-}
-
-a:visited {
-  color: #fff;
-}
-
-.social {
-  background-color: royalblue;
-  color: #fff;
-  font-size: inherit;
-  padding: 1rem;
-  position: fixed;
-  top: 30%;
-  left: 0;
-  z-index: 1;
+  top: 10px;
 }
