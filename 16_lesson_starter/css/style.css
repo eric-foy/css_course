@@ -1,17 +1,133 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
+/* Begin Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+}
+/* End Reset */
+
+/* Utility Classes */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+/* End Utility Classes */
+
 body {
   font-family: "Nunito", sans-serif;
   min-height: 100vh;
 }
 
+.example {
+  margin-top: 1rem;
+  padding-left: 20px;
 
+  /* To see what were working with on the page. */
+  border: 1px solid red;
+}
 
+/* img is actually an inline element.
+    This means that there will be a little bit of space it. */
+.example img {
+  width: 25%;
 
+  /* using height: auto because we added a height in the HTML. */
+  height: auto;
+}
 
+/* ****************************************************** */
+
+.container {
+  background-color: rgb(251, 220, 156);
+  background-image: url('../img/map-2176x1451.png');
+  /* background-repeat: no-repeat; */
+  background-repeat: repeat;
+  /* background-repeat: repeat-y; */
+  /* background-repeat: repeat-x; */
+  background-size: cover;
+  /* background-size: contain; */
+  background-position: center center;
+}
+
+.hero {
+  border-bottom: 2px solid black;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+
+  background-color: hsla(0, 0%, 80%, 0.35);
+}
+
+.h1 {
+  font-size: 150%;
+  color: aliceblue;
+  text-shadow: 2px 2px 5px black;
+  /* background-color: hsla(0, 0%, 0%, 0.459);
+  border-radius: 10px; */
+}
+
+.profile-pic-figure {
+  width: 35%;
+}
+
+.profile-pic-figure img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  border: 5px double gray;
+  border-radius: 50%;
+}
+
+figcaption {
+  text-align: center;
+  color: aliceblue;
+  /* text-shadow: 2px 2px 5px black; */
+  background-color: hsla(0, 0%, 0%, 0.459);
+  border-radius: 10px;
+}
+
+/* ****************************************************** */
+
+body {
+  /* background-color: aliceblue; */
+  /* background-image: linear-gradient(dodgerblue, white); */
+  /* background-image: linear-gradient(coral, yellow, white); */
+  /* background-image: linear-gradient(to left, coral, yellow, white); */
+  /* background-image: url(../img/bubbles.png); */
+  background-image:  url(../img/bubbles.png), linear-gradient(coral, yellow, white);
+  background-repeat: repeat-y, no-repeat;
+  background-position: center;
+  background-size: 35%, auto;
+
+  /* background: repeat-y center center url(../img/bubbles.png), no-repeat linear-gradient(coral, yellow, white);
+  background-size: 35%, auto; */
+}
+
+.clip {
+  font-weight: 800;
+  font-size: 16rem;
+  text-align: center;
+  background-image: url(../img/scenic-2200x1331.png);
+  background-size: 100%;
+  /* color: white; */
+  /* text-shadow: 2px 2px 5px black; */
+  text-transform: capitalize;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* color: hsla(0, 0%, 0%, 0.2); */
+  color:transparent;
+}
