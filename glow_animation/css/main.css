@@ -1,0 +1,36 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+/* 
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.SelectedFieldBox {
+    /* width: 200px;
+    height: 80px; */
+    /* animation: glow 1s infinite alternate; */
+    animation-name: glow;
+    animation-duration: 1.5s;
+    /* animation-iteration-count: 2; */
+    animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px -10px aqua;
+    }
+
+    50% {
+        box-shadow: 0 0 10px 8px aqua;
+    }
+
+    100% {
+        box-shadow: 0 0 10px -10px aqua;
+    }
+}
