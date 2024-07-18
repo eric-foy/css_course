@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
+/* Syntax: */
+/* @media mediatype and (condition: breakpoint) { CSS rules } */
+
+/* Mobile first web design. */
+/* Read min-width as "starting from". */
+@media screen and (min-width: 481px) { }
+
+/* Applies to anything that is wider then it is tall. */
+@media screen and (orientation: landscape) { }
+
+@media screen and (min-aspect-ratio: 16/9) { }
+
+/* ***************************************************** */
+
 /* || RESET */
 * {
   margin: 0;
@@ -11,4 +25,90 @@
 body {
   font: 1.5rem "Nunito", sans-serif;
   min-height: 100vh;
+
+  background-color: bisque;
+  background-image: radial-gradient(bisque, burlywood);
+  display: flex;
+  flex-direction: column;
+}
+
+header, nav, main, footer {
+  display: grid;
+  place-content: center;
+}
+
+header, footer {
+  position: sticky;
+  background-color: darksalmon;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+
+header {
+  top: 0;
+}
+
+main {
+  flex-grow: 1;
+}
+
+nav {
+  background-color: white;
+  padding: 0.5rem;
+  border-bottom: 2px solid black;
+}
+
+footer {
+  bottom: 0;
+}
+
+/* || SMALL */
+@media screen and (min-width: 576px) {
+  body {
+    background-color: aqua;
+    background-image: radial-gradient(azure, aqua);
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+/* || MEDIUM */
+@media screen and (min-width: 768px) {
+  body {
+    background-color: lemonchiffon;
+    background-image: radial-gradient(white, lemonchiffon);
+  }
+}
+
+/* || LARGE */
+@media screen and (min-width: 992px) {
+  body {
+    background-color: cornflowerblue;
+    background-image: radial-gradient(cyan, cornflowerblue);
+  }
+}
+
+/* || X-LARGE */
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: hotpink;
+    background-image: radial-gradient(pink, hotpink);
+  }
+}
+
+/* || MOBILE DEVICE LANDSCAPE */
+/* @media screen and (orientation: landscape) { } */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+  body {
+    background-color: darkseagreen;
+    background-image: radial-gradient(lightgreen, darkseagreen);
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  nav { display: none }
 }
